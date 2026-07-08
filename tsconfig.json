@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/components/CollectionCard.jsx", "app/components/CategoryCard.jsx", "app/components/BookCarousel.jsx", "app/category/[slug]/page.jsx", "app/api/login/route.js"  ],
   "exclude": ["node_modules"]
 }

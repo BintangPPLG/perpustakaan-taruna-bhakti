@@ -1,0 +1,53 @@
+{
+  "sekolah": {
+    "nama": "SMK Taruna Bhakti",
+    "alamat": "Jl. Pendidikan No. 123, Depok",
+    "telepon": "021-1234567",
+    "tahunAjar": "2024/2025"
+  },
+  "users": [
+    { "id": 1, "nama": "Admin Perpustakaan", "role": "admin" },
+    { "id": 2, "nama": "Guru Perpustakaan", "role": "petugas" },
+    { "id": 3, "nama": "Siswa Contoh", "role": "murid" }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "judul": "Rahasia Hujan",
+      "penulis": "Ayu Lestari",
+      "kategori": "Fiksi",
+      "image": "https://picsum.photos/seed/book1/200/300",
+      "tahunTerbit": 2023,
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "judul": "Dunia Kecilku",
+      "penulis": "Raihan Putra",
+      "kategori": "Fiksi",
+      "image": "https://picsum.photos/seed/book2/200/300",
+      "tahunTerbit": 2022,
+      "rating": 4.3
+    },
+    {
+      "id": 3,
+      "judul": "Si Penjelajah",
+      "penulis": "Dimas Ardi",
+      "kategori": "Petualangan",
+      "image": "https://picsum.photos/seed/book3/200/300",
+      "tahunTerbit": 2024,
+      "rating": 4.7
+    }
+  ],
+  "peminjaman": [
+    {
+      "id": 101,
+      "userId": 3,
+      "bookId": 1,
+      "status": "waiting_pickup",
+      "borrowDate": "2024-05-10T08:00:00Z",
+      "deadline": "2024-05-17T08:00:00Z"
+    }
+  ]
+}
+
