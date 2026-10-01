@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 import bcrypt from "bcrypt";
 import { JWT_CONFIG } from "@/lib/auth";
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
     const { email, password } = await req.json();
 

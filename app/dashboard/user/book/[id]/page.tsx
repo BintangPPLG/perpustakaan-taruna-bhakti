@@ -114,7 +114,7 @@ export default function BookDetailPage() {
       .map((l) => {
         if (l.dueAt && !l.returnedAt && (l.status === "active" || l.status === "waiting_schedule")) {
           const due = new Date(l.dueAt);
-          if (now > due && l.status !== "late") {
+          if (now > due) {
             l.status = "late";
           }
         }
@@ -144,9 +144,9 @@ export default function BookDetailPage() {
 
   const handleConfirmPickup = () => {
     if (!activeLoanForUser) return;
-    const updated = loans.map((l) =>
+    const updated: Loan[] = loans.map((l) =>
       l.id === activeLoanForUser.id
-        ? { ...l, status: "waiting_schedule", pickupConfirmedAt: new Date().toISOString() }
+        ? { ...l, status: "waiting_schedule" as LoanStatus, pickupConfirmedAt: new Date().toISOString() }
         : l
     );
     setLoans(updated);
@@ -155,9 +155,9 @@ export default function BookDetailPage() {
 
   const handleSetSchedule = () => {
     if (!activeLoanForUser || !startDate || !endDate) return;
-    const updated = loans.map((l) =>
+    const updated: Loan[] = loans.map((l) =>
       l.id === activeLoanForUser.id
-        ? { ...l, status: "active", startAt: startDate, dueAt: endDate }
+        ? { ...l, status: "active" as LoanStatus, startAt: startDate, dueAt: endDate }
         : l
     );
     setLoans(updated);
